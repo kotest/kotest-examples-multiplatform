@@ -6,9 +6,9 @@ import io.kotest.matchers.string.shouldHaveLength
 
 // this test only runs for native implementations
 class UUIDNativeTest : FunSpec() {
-    init {
-        test("uuids should have length 23") {
-            generateUUID().value.shouldHaveLength(23)
-        }
-    }
+   init {
+      test("uuids should have length 28") {
+         generateUUID().value.shouldHaveLength(28)
+      }
+   }
 }
