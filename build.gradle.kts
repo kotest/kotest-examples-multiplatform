@@ -9,7 +9,7 @@ plugins {
    java
    id("java-library")
    kotlin("multiplatform") version "1.5.21"
-   id("io.kotest.multiplatform") version "5.0.0.3"
+   id("io.kotest.multiplatform") version "5.0.0.4"
 }
 
 allprojects {
