@@ -33,8 +33,8 @@ kotlin {
          nodejs()
       }
       linuxX64()
-//      macosX64()
-//      mingwX64()
+      macosX64()
+      mingwX64()
    }
 
    sourceSets {
@@ -48,14 +48,14 @@ kotlin {
 
       val commonTest by getting {
          dependencies {
-            implementation("io.kotest:kotest-assertions-core:5.0.0.382-SNAPSHOT")
-            implementation("io.kotest:kotest-framework-engine:5.0.0.382-SNAPSHOT")
+            implementation("io.kotest:kotest-assertions-core:5.0.0.383-SNAPSHOT")
+            implementation("io.kotest:kotest-framework-engine:5.0.0.383-SNAPSHOT")
          }
       }
 
       val jvmTest by getting {
          dependencies {
-            implementation("io.kotest:kotest-runner-junit5-jvm:5.0.0.382-SNAPSHOT")
+            implementation("io.kotest:kotest-runner-junit5-jvm:5.0.0.383-SNAPSHOT")
          }
       }
    }
