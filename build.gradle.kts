@@ -9,17 +9,19 @@ plugins {
    java
    id("java-library")
    kotlin("multiplatform") version "1.5.21"
-   id("io.kotest.multiplatform") version "5.0.0.4"
+   id("io.kotest.multiplatform") version "5.0.0.5"
 }
 
 allprojects {
    repositories {
       mavenCentral()
+      mavenLocal()
       maven("https://oss.sonatype.org/content/repositories/snapshots")
    }
 }
 
 kotlin {
+
    targets {
       jvm {
          compilations.all {
@@ -37,6 +39,14 @@ kotlin {
       mingwX64()
    }
 
+   targets.all {
+      compilations.all {
+         kotlinOptions {
+            verbose = true
+         }
+      }
+   }
+
    sourceSets {
 
       val commonMain by getting {
@@ -48,16 +58,16 @@ kotlin {
 
       val commonTest by getting {
          dependencies {
-            implementation("io.kotest:kotest-assertions-core:5.0.0.383-SNAPSHOT")
-            implementation("io.kotest:kotest-framework-engine:5.0.0.383-SNAPSHOT")
+            implementation("io.kotest:kotest-assertions-core:5.0.0.417-SNAPSHOT")
+            implementation("io.kotest:kotest-framework-engine:5.0.0.417-SNAPSHOT")
          }
       }
 
-      val jvmTest by getting {
-         dependencies {
-            implementation("io.kotest:kotest-runner-junit5-jvm:5.0.0.383-SNAPSHOT")
-         }
-      }
+//      val jvmTest by getting {
+//         dependencies {
+//            implementation("io.kotest:kotest-runner-junit5-jvm:5.0.0-LOCAL")
+//         }
+//      }
    }
 }
 
