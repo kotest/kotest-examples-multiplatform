@@ -8,8 +8,8 @@ buildscript {
 plugins {
    java
    id("java-library")
-   kotlin("multiplatform") version "1.5.21"
-   id("io.kotest.multiplatform") version "5.0.0.5"
+   kotlin("multiplatform") version "1.6.0"
+   id("io.kotest.multiplatform") version "5.0.0"
 }
 
 allprojects {
@@ -32,7 +32,7 @@ kotlin {
       }
       js(IR) {
          browser()
-         nodejs()
+         //nodejs()
       }
       linuxX64()
       macosX64()
@@ -52,22 +52,25 @@ kotlin {
       val commonMain by getting {
          dependencies {
             implementation(kotlin("stdlib"))
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+
          }
       }
 
       val commonTest by getting {
          dependencies {
-            implementation("io.kotest:kotest-assertions-core:5.0.0.417-SNAPSHOT")
-            implementation("io.kotest:kotest-framework-engine:5.0.0.417-SNAPSHOT")
+            implementation("io.kotest:kotest-assertions-core:5.0.0.796-SNAPSHOT")
+            implementation("io.kotest:kotest-framework-engine:5.0.0.796-SNAPSHOT")
+            implementation("org.jetbrains.kotlin:kotlin-test-common:1.6.0")
+            implementation("org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.0")
          }
       }
 
-//      val jvmTest by getting {
-//         dependencies {
-//            implementation("io.kotest:kotest-runner-junit5-jvm:5.0.0-LOCAL")
-//         }
-//      }
+      val jvmTest by getting {
+         dependencies {
+            implementation("io.kotest:kotest-runner-junit5-jvm:5.0.0.796-SNAPSHOT")
+         }
+      }
    }
 }
 
