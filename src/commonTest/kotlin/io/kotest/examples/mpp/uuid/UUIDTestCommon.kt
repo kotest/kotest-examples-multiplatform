@@ -1,4 +1,4 @@
-package io.kotest.examples.mpp
+package io.kotest.examples.mpp.uuid
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.examples.multiplatform.generateUUID
