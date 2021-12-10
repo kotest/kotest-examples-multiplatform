@@ -9,7 +9,7 @@ plugins {
    java
    id("java-library")
    kotlin("multiplatform") version "1.6.0"
-   id("io.kotest.multiplatform") version "5.0.0"
+   id("io.kotest.multiplatform") version "5.0.2"
 }
 
 allprojects {
@@ -59,9 +59,9 @@ kotlin {
 
       val commonTest by getting {
          dependencies {
-            implementation("io.kotest:kotest-assertions-core:5.0.0")
-            implementation("io.kotest:kotest-framework-engine:5.0.0")
-            implementation("io.kotest:kotest-framework-datatest:5.0.0")
+            implementation("io.kotest:kotest-assertions-core:5.0.2")
+            implementation("io.kotest:kotest-framework-engine:5.0.2")
+            implementation("io.kotest:kotest-framework-datatest:5.0.2")
             implementation("org.jetbrains.kotlin:kotlin-test-common:1.6.0")
             implementation("org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.0")
          }
@@ -69,7 +69,7 @@ kotlin {
 
       val jvmTest by getting {
          dependencies {
-            implementation("io.kotest:kotest-runner-junit5-jvm:5.0.0")
+            implementation("io.kotest:kotest-runner-junit5-jvm:5.0.2")
          }
       }
    }
