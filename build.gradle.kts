@@ -52,24 +52,24 @@ kotlin {
       val commonMain by getting {
          dependencies {
             implementation(kotlin("stdlib"))
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2")
 
          }
       }
 
       val commonTest by getting {
          dependencies {
-            implementation("io.kotest:kotest-assertions-core:5.0.2")
-            implementation("io.kotest:kotest-framework-engine:5.0.2")
+            implementation("io.kotest:kotest-assertions-core:5.3.0")
+            implementation("io.kotest:kotest-framework-engine:5.3.0")
             implementation("io.kotest:kotest-framework-datatest:5.3.0")
-            implementation("org.jetbrains.kotlin:kotlin-test-common:1.6.0")
+            implementation("org.jetbrains.kotlin:kotlin-test-common:1.6.21")
             implementation("org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.0")
          }
       }
 
       val jvmTest by getting {
          dependencies {
-            implementation("io.kotest:kotest-runner-junit5-jvm:5.0.2")
+            implementation("io.kotest:kotest-runner-junit5-jvm:5.3.0")
          }
       }
    }
