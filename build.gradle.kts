@@ -62,7 +62,7 @@ kotlin {
             implementation("io.kotest:kotest-assertions-core:5.3.1")
             implementation("io.kotest:kotest-framework-engine:5.3.0")
             implementation("io.kotest:kotest-framework-datatest:5.3.1")
-            implementation("org.jetbrains.kotlin:kotlin-test-common:1.6.21")
+            implementation("org.jetbrains.kotlin:kotlin-test-common:1.7.0")
             implementation("org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.21")
          }
       }
