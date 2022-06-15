@@ -8,7 +8,7 @@ buildscript {
 plugins {
    java
    id("java-library")
-   kotlin("multiplatform") version "1.6.21"
+   kotlin("multiplatform") version "1.7.0"
    id("io.kotest.multiplatform") version "5.3.1"
 }
 
