@@ -52,7 +52,7 @@ kotlin {
       val commonMain by getting {
          dependencies {
             implementation(kotlin("stdlib"))
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3")
 
          }
       }
