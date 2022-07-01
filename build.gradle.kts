@@ -5,11 +5,12 @@ buildscript {
    }
 }
 
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
    java
    id("java-library")
-   kotlin("multiplatform") version "1.6.21"
-   id("io.kotest.multiplatform") version "5.3.1"
+   alias(libs.plugins.kotlin.multiplatform)
+   alias(libs.plugins.kotest.multiplatform)
 }
 
 allprojects {
@@ -51,25 +52,23 @@ kotlin {
 
       val commonMain by getting {
          dependencies {
-            implementation(kotlin("stdlib"))
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2")
-
+            implementation(libs.kotlinx.coroutines.core)
          }
       }
 
       val commonTest by getting {
          dependencies {
-            implementation("io.kotest:kotest-assertions-core:5.3.1")
-            implementation("io.kotest:kotest-framework-engine:5.3.1")
-            implementation("io.kotest:kotest-framework-datatest:5.3.1")
-            implementation("org.jetbrains.kotlin:kotlin-test-common:1.6.21")
-            implementation("org.jetbrains.kotlin:kotlin-test-annotations-common:1.6.21")
+            implementation(libs.kotest.assertions.core)
+            implementation(libs.kotest.framework.engine)
+            implementation(libs.kotest.framework.datatest)
+            implementation(kotlin("test-common"))
+            implementation(kotlin("test-annotations-common"))
          }
       }
 
       val jvmTest by getting {
          dependencies {
-            implementation("io.kotest:kotest-runner-junit5-jvm:5.3.1")
+            implementation(libs.kotest.runner.junit5)
          }
       }
    }
