@@ -1,6 +1,6 @@
 [versions]
 kotlin = "1.6.21"
-coroutines = "1.6.3"
+coroutines = "1.6.4"
 kotest = "5.3.2"
 
 [libraries]
