@@ -1,7 +1,7 @@
 [versions]
 kotlin = "1.6.21"
 coroutines = "1.6.4"
-kotest = "5.4.1"
+kotest = "5.4.2"
 
 [libraries]
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
